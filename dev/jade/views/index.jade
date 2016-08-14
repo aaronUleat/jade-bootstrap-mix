@@ -1,0 +1,35 @@
+extends ../templates/template
+block main
+	.col-md-12
+		form
+			.form-group
+				+input("text", 'otro', 'nombre', 'elNombre')
+				+input-group("$", "%")
+					+input-simple('text', 'txtName', "amount", 'Amount')
+				+checkbox-inline('true')
+				+checkbox-inline('false')
+	.col-md-12
+		+tab-list(['Home', 'Profile', "Messages", 'Settings'], 0)
+			+tab('Home', 'active')
+					.col-md-6
+						+table(["#","First Name","Last Name","Username"],
+						[
+							["1","Mark","Otto","@mdo"],
+							["2","Jacob","Thornton","@fat"],
+							["3","Larry","the Bird","@twitter"]
+						], 'uses-table')
+						+a-btn-primary('#').btn-danger View More
+					.col-md-6
+						+table(["#","First Name","Last Name","Username"],
+						[
+							["1",		"Mark",		"Otto",		"@mdo"],
+							["2",		"Jacob",		"Thornton",		"@fat"],
+							["3",		"Larry",		"the Bird",		"@twitter"]
+						], 'transaction-table')
+						+a-btn-primary('#') View More
+				
+			+tab('Profile')
+				h1 Profile
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque soluta qui labore repellat eveniet esse.
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe officia necessitatibus incidunt eum aspernatur voluptatum quibusdam ipsam ex asperiores. Perferendis ex minima saepe quos hic!
+
