@@ -6,6 +6,7 @@ html(lang="en")
 		meta(charset="UTF-8")
 		title Document
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.0.11/footable.bootstrap.min.css")
 		link(rel="stylesheet" href="css/style.css")
 	body
 		.container-fluid
@@ -19,8 +20,14 @@ html(lang="en")
 								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quo iusto aliquam, maiores, impedit illum expedita fugiat autem quod assumenda magnam nobis minima beatae eaque vel, eos commodi quam cupiditate nesciunt sint provident vitae rem. Modi minus temporibus sapiente. Voluptates laboriosam repellendus itaque! Exercitationem libero recusandae cupiditate non fugit voluptas.
 						.col-md-6
 							+panel-warning('warning', 'Warning Title')
-								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat omnis, commodi deserunt animi dolor reiciendis id corporis ducimus, iure molestias placeat in, ad quos quaerat ratione sunt alias, consequatur molestiae rerum! Saepe expedita est, iusto provident sed fuga necessitatibus amet vel iste, ducimus deserunt repellat quisquam hic totam adipisci quasi!		
+								+table-striped(["#","F Name","L Name","Username", "Entries", "Disasters", "Real State", "Poloticians"],
+								[
+									["1",				"Mark",			"Otto",				"@mdo",			"Entries", 		"Dissasters",		'Real State', 		'Politicians'],
+									["2",				"Jacob",			"Thornton",			"@fat",			"Entries",		"Dissasters",		'Real State', 		'Politicians'],
+									["3",				"Larry",			"the Bird",			"@twitter", 	"Entries",		"Dissasters", 		'Real State', 		'Politicians']
+								])
 						block main
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.0.11/footable.min.js")
