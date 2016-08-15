@@ -1,42 +1,34 @@
-//- panel
-mixin panel(type,title)
-  .panel(class="panel-#{type}")
-    if title !== undefined
-      .panel-heading
-        h3.panel-title= title
-      .panel-body
-        block
-    else
-      .panel-body
+mixin panel-primary(className, titleName)
+  .panel.panel-primary(class=className)
+    .panel-heading
+       h3=titleName
+    .panel-body
         block
 
+mixin panel-success(className, titleName)
+  .panel.panel-success(class=className)
+    .panel-heading
+        h3=titleName
+    .panel-body
+        block
+        
+mixin panel-info(className, titleName)
+  .panel.panel-info(class=className)
+    .panel-heading
+        h3=titleName
+    .panel-body
+        block
+        
+mixin panel-warning(className, titleName)
+  .panel.panel-warning(class=className)
+    .panel-heading
+        h3=titleName
+    .panel-body
+        block
 
-//- panel-default
-mixin panel-default(title)
-	+panel("default",title)
-		block
-
-//- panel-primary
-mixin panel-primary(title)
-	+panel("primary",title)
-		block
-		
-//- panel-success
-mixin panel-success(title)
-	+panel("success",title)
-		block
-		
-//- panel-info
-mixin panel-info(title)
-	+panel("info",title)
-		block
-
-//- panel-warning
-mixin panel-warning(title)
-	+panel("warning",title)
-		block
-		
-//- panel-danger
-mixin panel-danger(title)
-	+panel("danger",title)
-		block
+mixin panel-danger(className, titleName)
+  .panel.panel-danger(class=className)
+    .panel-heading
+        h3=titleName
+    .panel-body
+        block

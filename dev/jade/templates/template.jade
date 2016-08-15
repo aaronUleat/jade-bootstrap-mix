@@ -10,9 +10,17 @@ html(lang="en")
 	body
 		.container-fluid
 			.row
-				.menu-search.col-md-3.scrollspy
+				.menu-search.col-xs-3(data-spy="affix")
 					include ../includes/search-sidemenu
-				main-content.col-md-9
-					block main
+				main-content.col-xs-9.pull-right
+					.row
+						.col-md-6
+							+panel-info('primary', 'Primary Title')
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quo iusto aliquam, maiores, impedit illum expedita fugiat autem quod assumenda magnam nobis minima beatae eaque vel, eos commodi quam cupiditate nesciunt sint provident vitae rem. Modi minus temporibus sapiente. Voluptates laboriosam repellendus itaque! Exercitationem libero recusandae cupiditate non fugit voluptas.
+						.col-md-6
+							+panel-warning('warning', 'Warning Title')
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat omnis, commodi deserunt animi dolor reiciendis id corporis ducimus, iure molestias placeat in, ad quos quaerat ratione sunt alias, consequatur molestiae rerum! Saepe expedita est, iusto provident sed fuga necessitatibus amet vel iste, ducimus deserunt repellat quisquam hic totam adipisci quasi!		
+						block main
+
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
