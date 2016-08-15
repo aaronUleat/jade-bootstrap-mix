@@ -1,5 +1,5 @@
 //- table mixins
-mixin table(header,data,type)
+mixin table(header,data,type,iconFont)
 	- var type = type || ""
 	table.table(class="#{type}")
 		thead
@@ -10,7 +10,7 @@ mixin table(header,data,type)
 			each row,j in data
 				tr
 					each col,k in row
-						td #{col}
+						td(class=iconFont) #{col}
 	
 mixin table-striped(header,data)
 	+table(header,data,"table-striped")

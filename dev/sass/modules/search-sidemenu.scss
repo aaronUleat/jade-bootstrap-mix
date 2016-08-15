@@ -1,0 +1,35 @@
+.search-sidemenu {
+  > .search-account {
+      input {
+        text-transform: uppercase;
+      }
+  }
+  .side-menu {
+    .bs-docs-sidebar {
+      ul.nav.bs-docs-sidenav {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      > li {
+            position: relative;
+            display: block;
+          > a {
+            background: #fff;
+            outline: 0;
+            color: #767676;
+            transition: all .5s ease;
+            display: block;
+            &:hover {
+              padding-left: 19px;
+              color: #365483;
+              background-color: transparent;
+              border-left: 1px solid #365483;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
